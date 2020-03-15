@@ -1,5 +1,14 @@
 # Custom commands for git
 
+## How to use
+1. Put the command bash files in a folder
+2. Add the folder path to your **PATH** variable in your bash config file (**.bashrc** in Linux)
+  * Example: `export PATH="$PATH:$HOME/Work/custom-git-commands"`
+3. Source the bash config file
+* `source ~/.bash_profile`
+4. Set execution privileges to the command bash files
+5. That's it.
+
 ### git get-changes \<remote-branch>
 Scenario:
 
