@@ -15,4 +15,5 @@ if [ -z "$1" ]
     git commit -m "$1"
 
     echo "Pushed to remote..."
+    git push origin "$current_branch"
 fi
