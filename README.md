@@ -9,6 +9,9 @@
 4. Set execution privileges to the command bash files
 5. That's it.
 
+
+
+## Commands
 ### git get-changes \<remote-branch>
 Scenario:
 
