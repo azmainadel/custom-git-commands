@@ -1,0 +1,18 @@
+#!/bin/sh
+
+commit_message = $1
+current_branch = $(git symbolic-ref --short -q HEAD)
+
+if [ -z "$1" ]
+  then
+    echo "-------Enter a commit message-------"
+    exit 1
+  else
+    echo "Staging all changes..."
+    git add -A
+
+    echo "Commiting to local branch..."
+    git commit -m "$1"
+
+    echo "Pushed to remote..."
+fi
