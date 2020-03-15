@@ -1,8 +1,5 @@
 #!/bin/sh
 
-commit_message = $1
-current_branch = $(git rev-parse --abbrev-ref HEAD)
-
 if [ -z "$1" ]
   then
     echo "-------Enter a commit message-------"
@@ -15,5 +12,5 @@ if [ -z "$1" ]
     git commit -m "$1"
 
     echo "Pushed to remote..."
-    git push origin "$current_branch"
+    git push origin "$(git rev-parse --abbrev-ref HEAD)"
 fi
