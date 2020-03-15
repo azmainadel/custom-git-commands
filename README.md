@@ -22,7 +22,7 @@ Scenario:
 * Why the hustle?
 
 
-**To get the updates from `agaye-ache`, just use**
+**To get the updates from `agaye-ache`, just use:**
 ```
 git get-changes agaye-ache
 ```
@@ -34,9 +34,9 @@ git get-changes agaye-ache
 Scenario:
 
 * You added a quickfix.
-* You just want to add all changes right now and push
-* Why go through the steps of `add-> commit -> push`
+* You just want to add all changes and push.
+* Why go through the steps of `add -> commit -> push`?
 
-**To just stage and push everything right here right now, just use**
+**To just stage and push everything, right here right now, just use:**
 ```
 git acp "A bad commit message"
