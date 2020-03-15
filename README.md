@@ -9,7 +9,7 @@
 4. Set execution privileges to the command bash files
 5. That's it.
 
-
+<br/>
 
 ## Commands
 ### git get-changes \<remote-branch>
@@ -25,3 +25,18 @@ Scenario:
 **To get the updates from `agaye-ache`, just use**
 ```
 git get-changes agaye-ache
+```
+
+<br/>
+
+### git acp \<commit-message>
+#### acp = add all, commit, push
+Scenario:
+
+* You added a quickfix.
+* You just want to add all changes right now and push
+* Why go through the steps of `add-> commit -> push`
+
+**To just stage and push everything right here right now, just use**
+```
+git acp "A bad commit message"
