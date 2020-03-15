@@ -1,0 +1,20 @@
+#!/bin/sh
+
+remote_branch = $1
+current_branch = $(git symbolic-ref --short -q HEAD)
+
+test -z "$remote_branch" && echo "Enter a remote branch to pull changes from..." 1>&2 && exit 1
+
+echo "On branch $current_branch"
+echo "Pulling from remote $remote_branch"
+
+git stash
+git checkout "$remote_branch"
+git pull --rebase origin "$remote_branch"
+git checkout "$current_branch"
+git rebase "$remote_branch"
+git stash apply
+
+echo "$remote_branch changes added to $current_branch"
+
+fi
