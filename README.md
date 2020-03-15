@@ -12,7 +12,7 @@
 <br/>
 
 ## Commands
-### git get-changes \<remote-branch>
+### 1. git get-changes \<remote-branch>
 Scenario:
 
 * Suppose you are working on a *local* branch named `kaaj-kortesi`
@@ -29,7 +29,7 @@ git get-changes agaye-ache
 
 <br/>
 
-### git acp \<commit-message>
+### 2. git acp \<commit-message>
 #### acp = add all, commit, push
 Scenario:
 
