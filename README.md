@@ -5,9 +5,10 @@
 2. Add the folder path to your **PATH** variable in your bash config file (**.bashrc** in Linux)
   * Example: `export PATH="$PATH:$HOME/Work/custom-git-commands"`
 3. Source the bash config file
-* `source ~/.bash_profile`
-4. Set execution privileges to the command bash files
-5. That's it.
+* `source ~/.bashrc` (depending on your OS)
+4. Set execution privileges to the command bash files using `chmod +x`
+
+That's it.
 
 <br/>
 
@@ -26,7 +27,7 @@ Scenario:
 git create
 ```
 
-It'll take the **new_repo_name** and your **username** as input. Set them and you're ready to go!
+It'll take the **new_repo_name** and your **username** as input. Set them and you're ready to go! A remote repo will be created on Github and the local repo will be linked with it.
 
 <br/>
 
