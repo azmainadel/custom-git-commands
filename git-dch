@@ -1,0 +1,23 @@
+#!/bin/sh
+
+# Delete Commit History (DCH)
+
+current_branch=$(git rev-parse --abbrev-ref HEAD)
+
+echo "Checking out to a temporary branch..."
+git checkout --orphan TEMP_BRANCH
+
+echo "Commiting..."
+git add -A
+git commit -am "Delete all commit history"
+
+echo "Deleting old branch..."
+git branch -D "$current_branch"
+
+echo "Renaming the temporary branch..."
+git branch -m "$current_branch"
+
+echo "Updating remote..."
+git push -f "$current_branch"
+
+
