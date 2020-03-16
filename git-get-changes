@@ -16,5 +16,3 @@ git rebase "$remote_branch"
 git stash apply
 
 echo "$remote_branch changes added to $current_branch"
-
-fi
