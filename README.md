@@ -43,7 +43,7 @@ git acp "A bad commit message"
 
 <br/>
 
-### 2. git dch (Delete Commit History)
+### 3. git dch (Delete Commit History)
 Scenario:
 
 * You want a fresh start with all your previous codes intact.
