@@ -1,0 +1,20 @@
+#!/bin/sh
+
+echo "Enter new repo name:"
+read repo_name
+
+echo "Enter your Github username:"
+read user_name
+
+test -z "$repo_name" && echo "Repo name required!" 1>&2 && exit 1
+
+echo "=============================================="
+echo "Creating remote repository..."
+curl -u "$user_name" https://api.github.com/user/repos -d "{\"name\":\"$repo_name\"}"
+
+echo "=============================================="
+echo "Initializing git in local folder..."
+git init
+git remote add origin "https://github.com/your_github_username/$repo_name.git"
+
+echo "Remote origin added"
