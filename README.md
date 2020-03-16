@@ -12,20 +12,21 @@
 <br/>
 
 ## Commands
-### 1. git get-changes \<remote-branch>
+### 1. git create
 Scenario:
 
-* Suppose you are working on a *local* branch named `kaaj-kortesi`
-* Somebody added their changes to a *remote* branch `agaye-ache`
-* You need those changes on your local branch. 
-* So you `stash-> switch branches -> pull from remote -> switch branches -> rebase -> apply stash`
-* Why the hustle?
+* You are working on a local folder.
+* You want to initialize git and add a remote repo
+* In this case, we go to the Github website and create a repo, then add the remote origin after initializing git using `git init`
+* To make things more simple, you can use a single custom command.
 
+**Just use:**
 
-**To get the updates from `agaye-ache`, just use:**
 ```
-git get-changes agaye-ache
+git create
 ```
+
+It'll take the **new_repo_name** and your **username** as input. Set them and you're ready to go!
 
 <br/>
 
@@ -43,7 +44,24 @@ git acp "A bad commit message"
 
 <br/>
 
-### 3. git dch (Delete Commit History)
+### 3. git get-changes \<remote-branch>
+Scenario:
+
+* Suppose you are working on a *local* branch named `kaaj-kortesi`
+* Somebody added their changes to a *remote* branch `agaye-ache`
+* You need those changes on your local branch. 
+* So you `stash-> switch branches -> pull from remote -> switch branches -> rebase -> apply stash`
+* Why the hustle?
+
+
+**To get the updates from `agaye-ache`, just use:**
+```
+git get-changes agaye-ache
+```
+
+<br/>
+
+### 4. git dch (Delete Commit History)
 Scenario:
 
 * You want a fresh start with all your previous codes intact.
