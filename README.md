@@ -18,7 +18,7 @@ Scenario:
 * Suppose you are working on a *local* branch named `kaaj-kortesi`
 * Somebody added their changes to a *remote* branch `agaye-ache`
 * You need those changes on your local branch. 
-* So you `stash-> switch branches-> pull from remote-> switch branches-> rebase-> apply stash`
+* So you `stash-> switch branches -> pull from remote -> switch branches -> rebase -> apply stash`
 * Why the hustle?
 
 
@@ -29,8 +29,7 @@ git get-changes agaye-ache
 
 <br/>
 
-### 2. git acp \<commit-message>
-#### acp = add all, commit, push
+### 2. git acp \<commit-message> (Add-Commit-Push)
 Scenario:
 
 * You added a quickfix.
@@ -40,3 +39,17 @@ Scenario:
 **To just stage and push everything, right here right now, just use:**
 ```
 git acp "A bad commit message"
+```
+
+<br/>
+
+### 2. git dch (Delete Commit History)
+Scenario:
+
+* You want a fresh start with all your previous codes intact.
+* You'd need to `create a temp ORPHAN branch -> add all and commit to that branch -> delete old branch -> rename temp to the old branch name -> force push changes to remote`
+
+**Instead of those steps, just use:**
+```
+git dch
+```
